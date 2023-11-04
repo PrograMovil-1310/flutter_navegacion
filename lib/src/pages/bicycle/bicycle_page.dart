@@ -25,6 +25,7 @@ class _BicyclePageState extends State<BicyclePage> {
       MaterialPageRoute(builder: (context) => const BicycleDetailPage()),
     );
     if (!mounted) return;
+    if (result == null) return;
     ScaffoldMessenger.of(context)
       ..removeCurrentSnackBar()
       ..showSnackBar(SnackBar(content: result));
